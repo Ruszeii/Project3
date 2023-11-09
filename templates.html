@@ -1,0 +1,29 @@
+<script id="question-template" type="text/x-handlebars-template">
+    <h2>{{question}}</h2>
+    {{#ifCond type "===" "multiple-choice"}}
+        {{#each options}}
+            <div class="form-check">
+                <input type="radio" class="form-check-input" name="answer" value="{{this}}" id="{{this}}">
+                <label class="form-check-label" for="{{this}}">{{this}}</label>
+            </div>
+        {{/each}}
+        <button id="submit-answer" class="btn btn-primary">Submit</button>
+    {{/ifCond}}
+</script>
+
+<script id="feedback-template" type="text/x-handlebars-template">
+    <p>{{feedback}}</p>
+    <button id="got-it-button" class="btn btn-primary">Got It</button>
+</script>
+
+<script id="scoreboard-template" type="text/x-handlebars-template">
+    <p>Questions answered: <span>{{answeredCount}}</span></p>
+    <p>Elapsed time: <span>{{elapsedTime}}</span> seconds</p>
+    <p>Total score: <span>{{totalScore}}</span></p>
+</script>
+
+<script id="completion-template" type="text/x-handlebars-template">
+    <h2>{{completionMessage}}</h2>
+    <button id="retry-quiz" class="btn btn-primary">Retry Quiz</button>
+    <button id="return-to-main" class="btn btn-primary">Return to Main Page</button>
+</script>
