@@ -43,9 +43,26 @@ function startQuiz(quizId) {
 function showNextQuestion() {
     if (currentQuestionIndex < currentQuiz.length) {
         const question = currentQuiz[currentQuestionIndex];
-    
-    } else {
+         const questionText = question.text;
+        const answerOptions = question.options;
 
+    const questionElement = document.getElementById('question-text');
+    questionElement.textContent = questionText;
+
+    const answerOptionsElement = document.getElementById('answer-options');
+    answerOptionsElement.innerHTML = ''; // Clear existing answer options
+
+    for (const answerOption of answerOptions) {
+      const answerOptionElement = document.createElement('input');
+      answerOptionElement.type = 'radio';
+      answerOptionElement.value = answerOption;
+      answerOptionElement.textContent = answerOption;
+
+      answerOptionsElement.appendChild(answerOptionElement);
+    }
+        currentQuestionIndex++;
+    } else {
+        showCompletionView();
     }
 }
 
