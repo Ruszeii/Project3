@@ -58,9 +58,9 @@ function showNextQuestion() {
         for (const answerOption of answerOptions) {
             const answerOptionElement = document.createElement('input');
             answerOptionElement.type = 'radio';
-            answerOptionElement.name = 'answer';
-            answerOptionElement.value = answerOption.text; // Use "text" for option text
-            answerOptionElement.textContent = answerOption.text;
+           
+            answerOptionElement.value = answerOption.; // Use "text" for option text
+            answerOptionElement.textContent = answerOption.;
 
             answerOptionsElement.appendChild(answerOptionElement);
         }
