@@ -30,7 +30,6 @@ let currentQuestionIndex = 0;
 let correctAnswers = 0;
 let answeredQuestions = 0;
 
-// Function to start the quiz
 async function startQuiz(quizId) {
     try {
         const response = await fetch(`https://my-json-server.typicode.com/ruszeii/Project3/${quizId}`);
@@ -47,8 +46,8 @@ async function startQuiz(quizId) {
 function showNextQuestion() {
     if (currentQuestionIndex < currentQuiz.length) {
         const question = currentQuiz[currentQuestionIndex];
-        const questionText = question.question; // Use "question" instead of "text"
-        const answerOptions = question.options;
+        const questionText = question.text; // Use "text" instead of "question"
+        const answerOptions = question.answerOptions; // Use "answerOptions" instead of "options"
 
         const questionElement = document.getElementById('question-text');
         questionElement.textContent = questionText;
@@ -59,9 +58,9 @@ function showNextQuestion() {
         for (const answerOption of answerOptions) {
             const answerOptionElement = document.createElement('input');
             answerOptionElement.type = 'radio';
-            answerOptionElement.name = 'answer'; // Ensure the radio buttons are in the same group
-            answerOptionElement.value = answerOption;
-            answerOptionElement.textContent = answerOption;
+            answerOptionElement.name = 'answer';
+            answerOptionElement.value = answerOption.text; // Use "text" for option text
+            answerOptionElement.textContent = answerOption.text;
 
             answerOptionsElement.appendChild(answerOptionElement);
         }
