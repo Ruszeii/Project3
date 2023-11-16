@@ -32,8 +32,8 @@ let answeredQuestions = 0;
 
 async function startQuiz(quizId) {
     try {
-        const response = await fetch(`https://my-json-server.typicode.com/ruszeii/Project3/${quizId}`);
-        currentQuiz = await response.json();
+        const response = await fetch(`https://my-json-server.typicode.com/Ruszeii/Project3/${quizId}`);
+        const quizData = await response.json();
         currentQuestionIndex = 0;
         correctAnswers = 0;
         answeredQuestions = 0;
