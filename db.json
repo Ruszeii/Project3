@@ -1,0 +1,65 @@
+[
+  {
+    "text": "What is the capital of France?",
+    "answerOptions": [
+      {
+        "text": "Paris",
+        "value": "correct"
+      },
+      {
+        "text": "London",
+        "value": "incorrect"
+      },
+      {
+        "text": "Rome",
+        "value": "incorrect"
+      },
+      {
+        "text": "Berlin",
+        "value": "incorrect"
+      }
+    ]
+  },
+  {
+    "text": "What is the largest country in the world by land area?",
+    "answerOptions": [
+      {
+        "text": "Russia",
+        "value": "correct"
+      },
+      {
+        "text": "China",
+        "value": "incorrect"
+      },
+      {
+        "text": "Canada",
+        "value": "incorrect"
+      },
+      {
+        "text": "United States",
+        "value": "incorrect"
+      }
+    ]
+  },
+  {
+    "text": "What is the deepest ocean in the world?",
+    "answerOptions": [
+      {
+        "text": "Pacific Ocean",
+        "value": "incorrect"
+      },
+      {
+        "text": "Atlantic Ocean",
+        "value": "incorrect"
+      },
+      {
+        "text": "Indian Ocean",
+        "value": "incorrect"
+      },
+      {
+        "text": "Mariana Trench",
+        "value": "correct"
+      }
+    ]
+  }
+]
