@@ -1,4 +1,3 @@
-// Define the quiz data
 const apiUrl = "https://my-json-server.typicode.com/Ruszeii/Project3";
 
 // Global variables
@@ -15,7 +14,7 @@ async function startQuiz(quizId) {
     const quizDataFromAPI = await response.json();
 
     if (quizDataFromAPI) {
-      currentQuiz = quizDataFromAPI;
+      currentQuiz = quizDataFromAPI.questions;
       currentQuestionIndex = 0;
       correctAnswers = 0;
       answeredQuestions = 0;
