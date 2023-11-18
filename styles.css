@@ -1,6 +1,7 @@
 
 body {
-    background-color: #f0f0f0;
+    background-color: darkgrey;
+    color: white;
 }
 h1 {
     font-family: 'Your Chosen Font', sans-serif; /* Replace 'Your Chosen Font' with the desired font */
