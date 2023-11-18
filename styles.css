@@ -2,6 +2,10 @@
 body {
     background-color: #f0f0f0;
 }
+h1 {
+    font-family: 'Your Chosen Font', sans-serif; /* Replace 'Your Chosen Font' with the desired font */
+    color: #007bff;
+}
 
 .container {
     max-width: 400px;
